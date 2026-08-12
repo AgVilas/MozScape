@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio · Edson Pain — MozScape</title>
+    <meta name="description"
+        content="Portfólio de fotografia de paisagem de Edson Pain: luz, mar e horizonte de Moçambique em alta resolução.">
+    <meta name="theme-color" content="#05070f">
+    <link rel="icon" href="images/sea.png" type="image/png">
+    <link rel="stylesheet" href="fontes/webfonts/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <!-- Marca que há JS: os estados iniciais das animações só se aplicam se
+         houver quem os desfaça. Sem JS, a página aparece inteira. -->
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+    <!-- Barra de progresso de leitura -->
+    <div class="progress" aria-hidden="true"><span class="progress__bar" id="progressBar"></span></div>
+
+    <a class="skip-link" href="#galeria">Saltar para a galeria</a>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="siteHeader">
+        <div class="shell site-header__inner">
+            <a class="brand" href="index.html" aria-label="MozScape — página inicial">
+                <img src="images/logo-black.png" alt="" class="brand__logo">
+                <span class="brand__divider" aria-hidden="true"></span>
+                <span class="brand__tag">Portfólio</span>
+            </a>
+
+            <nav class="nav" id="primaryNav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="portfolio.html" class="is-active" aria-current="page">Portfólio</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contacto.html">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="visaoPerfil.html" class="user-chip">
+                    <span class="user-chip__avatar" style="background-image:url('images/perfil.png');"></span>
+                    <span class="user-chip__name">Pain 29</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false"
+                    aria-controls="primaryNav" aria-label="Abrir menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="hero">
+            <div class="hero__media" aria-hidden="true">
+                <div class="hero__slide is-active" style="background-image:url('images/ceu.jpg');"></div>
+                <div class="hero__slide" style="background-image:url('images/praias.jpg');"></div>
+                <div class="hero__slide" style="background-image:url('images/sol.jpg');"></div>
+                <div class="hero__slide" style="background-image:url('images/reflexo.jpg');"></div>
+                <div class="hero__scrim"></div>
+                <div class="hero__glow" id="heroGlow"></div>
+            </div>
+
+            <div class="shell hero__inner">
+                <div class="hero__content">
+                    <p class="eyebrow reveal" data-reveal>
+                        <span class="eyebrow__dot" aria-hidden="true"></span>
+                        Fotógrafo de paisagem · Maputo, Moçambique
+                    </p>
+
+                    <h1 class="hero__name" id="heroName" aria-label="Edson Pain">
+                        <span class="hero__line" data-split>Edson</span>
+                        <span class="hero__line hero__line--outline" data-split>Pain</span>
+                    </h1>
+
+                    <p class="hero__lede reveal" data-reveal data-delay="120">
+                        Persigo a luz que dura três minutos. <em>Maré, sal, granito e céu</em> — o país inteiro
+                        cabe num quadro quando o sol se despede.
+                    </p>
+
+                    <div class="hero__cta reveal" data-reveal data-delay="220">
+                        <a href="#galeria" class="btn btn--primary">
+                            <i class="fa-solid fa-images" aria-hidden="true"></i> Ver galeria
+                        </a>
+                        <a href="contacto.html" class="btn btn--ghost">
+                            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Trabalhar comigo
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="social-rail reveal" data-reveal data-delay="320" aria-label="Redes sociais">
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="#" aria-label="Behance"><i class="fa-brands fa-behance" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="mailto:edsonpain29@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"
+                                aria-hidden="true"></i></a></li>
+                </ul>
+
+                <div class="hero__stats reveal" data-reveal data-delay="380">
+                    <div class="stat">
+                        <span class="stat__num" data-count="248" data-suffix="">248</span>
+                        <span class="stat__label">Fotografias publicadas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num" data-count="19" data-suffix="K">19K</span>
+                        <span class="stat__label">Descarregamentos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num" data-count="11" data-suffix="">11</span>
+                        <span class="stat__label">Províncias percorridas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num" data-count="7" data-suffix="">7</span>
+                        <span class="stat__label">Anos atrás da lente</span>
+                    </div>
+                </div>
+            </div>
+
+            <a class="scroll-cue" href="#galeria" aria-label="Descer para a galeria">
+                <span class="scroll-cue__line" aria-hidden="true"></span>
+                <span class="scroll-cue__text">Rolar</span>
+            </a>
+        </section>
+
+        <!-- ============ MARQUEE ============ -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>Natureza</span><span class="marquee__sep">✦</span>
+                <span>Litoral</span><span class="marquee__sep">✦</span>
+                <span>Arquitectura</span><span class="marquee__sep">✦</span>
+                <span>Céu &amp; Nuvens</span><span class="marquee__sep">✦</span>
+                <span>Reflexos</span><span class="marquee__sep">✦</span>
+                <span>Hora dourada</span><span class="marquee__sep">✦</span>
+                <span>Natureza</span><span class="marquee__sep">✦</span>
+                <span>Litoral</span><span class="marquee__sep">✦</span>
+                <span>Arquitectura</span><span class="marquee__sep">✦</span>
+                <span>Céu &amp; Nuvens</span><span class="marquee__sep">✦</span>
+                <span>Reflexos</span><span class="marquee__sep">✦</span>
+                <span>Hora dourada</span><span class="marquee__sep">✦</span>
+            </div>
+        </div>
+
+        <!-- ============ GALERIA ============ -->
+        <section class="section section--gallery" id="galeria">
+            <div class="shell">
+                <div class="section__head">
+                    <div>
+                        <p class="section__kicker reveal" data-reveal>01 — Trabalho seleccionado</p>
+                        <h2 class="section__title reveal" data-reveal data-delay="80">
+                            A colecção <em>completa</em>
+                        </h2>
+                    </div>
+                    <p class="section__note reveal" data-reveal data-delay="160">
+                        Doze imagens, doze saídas de casa. Filtre por tema ou abra qualquer fotografia em ecrã
+                        inteiro — todas disponíveis para descarregar em alta resolução.
+                    </p>
+                </div>
+
+                <div class="filters reveal" data-reveal data-delay="120" role="tablist" aria-label="Filtrar galeria">
+                    <button class="chip is-active" role="tab" aria-selected="true" data-filter="all">Tudo <span
+                            class="chip__count">12</span></button>
+                    <button class="chip" role="tab" aria-selected="false" data-filter="natureza">Natureza <span
+                            class="chip__count">2</span></button>
+                    <button class="chip" role="tab" aria-selected="false" data-filter="litoral">Litoral <span
+                            class="chip__count">2</span></button>
+                    <button class="chip" role="tab" aria-selected="false" data-filter="urbano">Urbano <span
+                            class="chip__count">3</span></button>
+                    <button class="chip" role="tab" aria-selected="false" data-filter="ceu">Céu &amp; Noite <span
+                            class="chip__count">5</span></button>
+                </div>
+
+                <div class="gallery" id="gallery">
+                    <figure class="shot" data-cat="ceu" data-src="images/ceu.jpg" data-title="Arquitectura de Nuvens"
+                        data-place="Marracuene, Maputo" data-meta="f/8 · 1/250s · ISO 100">
+                        <img class="shot__img" src="images/ceu.jpg" alt="Nuvens incendiadas pelo pôr do sol sobre a linha das árvores" loading="lazy" decoding="async"
+                            width="2048" height="1152">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Céu &amp; Noite</span>
+                            <span class="shot__title">Arquitectura de Nuvens</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Marracuene, Maputo</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Arquitectura de Nuvens” em ecrã inteiro"></button>
+                    </figure>
+
+                    <figure class="shot shot--tall" data-cat="litoral" data-src="images/back2.jpg" data-title="Palmeira ao Poente"
+                        data-place="Vilanculos, Inhambane" data-meta="f/6.3 · 1/500s · ISO 100">
+                        <img class="shot__img" src="images/back2.jpg" alt="Silhueta de palmeira contra um céu rosado ao entardecer" loading="lazy" decoding="async"
+                            width="1152" height="2048">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Litoral</span>
+                            <span class="shot__title">Palmeira ao Poente</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Vilanculos, Inhambane</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Palmeira ao Poente” em ecrã inteiro"></button>
+                    </figure>
+
+                    <figure class="shot" data-cat="litoral" data-src="images/praias.jpg" data-title="Tudo o que é Azul"
+                        data-place="Praia do Tofo, Inhambane" data-meta="f/11 · 1/400s · ISO 100">
+                        <img class="shot__img" src="images/praias.jpg" alt="Praia de areia clara e mar turquesa ao meio-dia" loading="lazy" decoding="async"
+                            width="1350" height="1080">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Litoral</span>
+                            <span class="shot__title">Tudo o que é Azul</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Praia do Tofo, Inhambane</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Tudo o que é Azul” em ecrã inteiro"></button>
+                    </figure>
+
+                    <figure class="shot" data-cat="natureza" data-src="images/natureza.jpg" data-title="Fio de Ouro"
+                        data-place="Jardim Tunduru, Maputo" data-meta="f/5.6 · 1/200s · ISO 400">
+                        <img class="shot__img" src="images/natureza.jpg" alt="Aranha de grande porte na sua teia, entre folhagem verde" loading="lazy" decoding="async"
+                            width="2048" height="1537">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Natureza</span>
+                            <span class="shot__title">Fio de Ouro</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Jardim Tunduru, Maputo</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Fio de Ouro” em ecrã inteiro"></button>
+                    </figure>
+
+                    <figure class="shot shot--wide" data-cat="ceu" data-src="images/reflexo.jpg" data-title="Espelho de Água"
+                        data-place="Costa do Sol, Maputo" data-meta="f/4 · 1/125s · ISO 200">
+                        <img class="shot__img" src="images/reflexo.jpg" alt="Palmeiras reflectidas na água parada de um charco" loading="lazy" decoding="async"
+                            width="1440" height="754">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Céu &amp; Noite</span>
+                            <span class="shot__title">Espelho de Água</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Costa do Sol, Maputo</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Espelho de Água” em ecrã inteiro"></button>
+                    </figure>
+
+                    <figure class="shot shot--tall" data-cat="natureza" data-src="images/back.jpg" data-title="Fogo Vegetal"
+                        data-place="Jardim dos Namorados, Maputo" data-meta="f/2.8 · 1/250s · ISO 200">
+                        <img class="shot__img" src="images/back.jpg" alt="Flores vermelhas em plano aproximado sobre fundo verde" loading="lazy" decoding="async"
+                            width="4724" height="5906">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Natureza</span>
+                            <span class="shot__title">Fogo Vegetal</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Jardim dos Namorados, Maputo</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Fogo Vegetal” em ecrã inteiro"></button>
+                    </figure>
+
+                    <figure class="shot" data-cat="urbano" data-src="images/arquitetura.jpg" data-title="Vidro e Céu"
+                        data-place="Av. 24 de Julho, Maputo" data-meta="f/9 · 1/320s · ISO 100">
+                        <img class="shot__img" src="images/arquitetura.jpg" alt="Cobertura de vidro de um edifício vista de baixo para cima" loading="lazy" decoding="async"
+                            width="2048" height="1536">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Urbano</span>
+                            <span class="shot__title">Vidro e Céu</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Av. 24 de Julho, Maputo</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Vidro e Céu” em ecrã inteiro"></button>
+                    </figure>
+
+                    <figure class="shot shot--short" data-cat="urbano" data-src="images/cidades.jpg" data-title="Avenida Vertical"
+                        data-place="Baixa, Maputo" data-meta="f/8 · 1/500s · ISO 100">
+                        <img class="shot__img" src="images/cidades.jpg" alt="Prédios altos ao longo de uma avenida sob céu limpo" loading="lazy" decoding="async"
+                            width="960" height="720">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Urbano</span>
+                            <span class="shot__title">Avenida Vertical</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Baixa, Maputo</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Avenida Vertical” em ecrã inteiro"></button>
+                    </figure>
+
+                    <figure class="shot shot--wide" data-cat="ceu" data-src="images/sol.jpg" data-title="Último Raio"
+                        data-place="Ponta do Ouro, Maputo" data-meta="f/16 · 1/800s · ISO 64">
+                        <img class="shot__img" src="images/sol.jpg" alt="Sol vermelho a descer sobre a silhueta das árvores" loading="lazy" decoding="async"
+                            width="1776" height="999">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Céu &amp; Noite</span>
+                            <span class="shot__title">Último Raio</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Ponta do Ouro, Maputo</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Último Raio” em ecrã inteiro"></button>
+                    </figure>
+
+                    <figure class="shot" data-cat="ceu" data-src="images/montanhas.jpg" data-title="Candeeiro Azul"
+                        data-place="Bairro da Polana, Maputo" data-meta="f/5.6 · 1/60s · ISO 320">
+                        <img class="shot__img" src="images/montanhas.jpg" alt="Candeeiro de rua aceso contra um céu azul profundo" loading="lazy" decoding="async"
+                            width="2048" height="1536">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Céu &amp; Noite</span>
+                            <span class="shot__title">Candeeiro Azul</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Bairro da Polana, Maputo</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Candeeiro Azul” em ecrã inteiro"></button>
+                    </figure>
+
+                    <figure class="shot" data-cat="ceu" data-src="images/random.jpg" data-title="Risco de Fogo"
+                        data-place="Noite de Julho, Matola" data-meta="f/2.8 · 1/40s · ISO 800">
+                        <img class="shot__img" src="images/random.jpg" alt="Rasto de chama a cortar a escuridão" loading="lazy" decoding="async"
+                            width="2047" height="2048">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Céu &amp; Noite</span>
+                            <span class="shot__title">Risco de Fogo</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Noite de Julho, Matola</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Risco de Fogo” em ecrã inteiro"></button>
+                    </figure>
+
+                    <figure class="shot shot--short" data-cat="urbano" data-src="images/Carros.jpg" data-title="Linha Branca"
+                        data-place="Rua da Argélia, Maputo" data-meta="f/4 · 1/500s · ISO 200">
+                        <img class="shot__img" src="images/Carros.jpg" alt="Automóvel branco estacionado numa rua arborizada" loading="lazy" decoding="async"
+                            width="2046" height="1151">
+                        <span class="shot__veil" aria-hidden="true"></span>
+                        <figcaption class="shot__cap">
+                            <span class="shot__tag">Urbano</span>
+                            <span class="shot__title">Linha Branca</span>
+                            <span class="shot__place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Rua da Argélia, Maputo</span>
+                        </figcaption>
+                        <span class="shot__zoom" aria-hidden="true"><i
+                                class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                        <button class="shot__btn" type="button" aria-label="Abrir “Linha Branca” em ecrã inteiro"></button>
+                    </figure>
+                </div>
+
+                <p class="gallery__empty" id="galleryEmpty" hidden>Nenhuma fotografia neste tema — para já.</p>
+            </div>
+        </section>
+
+        <!-- ============ SOBRE ============ -->
+        <section class="section section--about" id="sobre-fotografo">
+            <div class="shell about">
+                <div class="about__visual reveal" data-reveal>
+                    <div class="portrait" data-tilt>
+                        <img class="portrait__img" src="images/back2.jpg"
+                            alt="Palmeira em silhueta contra o céu ao entardecer" loading="lazy" width="1152"
+                            height="2048">
+                        <span class="portrait__frame" aria-hidden="true"></span>
+                        <div class="portrait__id">
+                            <span class="portrait__avatar" style="background-image:url('images/perfil.png');"
+                                aria-hidden="true"></span>
+                            <span class="portrait__idtext">
+                                <b>Edson Pain</b>
+                                <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Uploader
+                                    verificado</span>
+                            </span>
+                        </div>
+                    </div>
+                    <blockquote class="pull-quote">
+                        “A paisagem não posa. Ou estás lá quando a luz cai, ou ficas com a história.”
+                    </blockquote>
+                </div>
+
+                <div class="about__text">
+                    <p class="section__kicker reveal" data-reveal>02 — Quem está atrás da lente</p>
+                    <h2 class="section__title reveal" data-reveal data-delay="80">Edson <em>Pain</em></h2>
+                    <p class="lede reveal" data-reveal data-delay="140">
+                        Comecei com uma câmara emprestada e uma estrada de terra batida a caminho de Bilene. Sete
+                        anos depois continuo a fazer o mesmo: acordar antes do sol e esperar. Fotografo Moçambique
+                        de norte a sul — dunas, mangais, betão e a linha exacta onde o Índico encontra o céu.
+                    </p>
+                    <p class="reveal" data-reveal data-delay="200">
+                        Todo o trabalho aqui foi captado em digital, revelado com mão leve e publicado em alta
+                        resolução no MozScape para quem quiser levar um pedaço do país para casa.
+                    </p>
+
+                    <ul class="skills reveal" data-reveal data-delay="240">
+                        <li class="skill" style="--val:96%">
+                            <span class="skill__top"><span>Paisagem &amp; natureza</span><b>96</b></span>
+                            <span class="skill__track"><span class="skill__fill"></span></span>
+                        </li>
+                        <li class="skill" style="--val:88%">
+                            <span class="skill__top"><span>Longa exposição</span><b>88</b></span>
+                            <span class="skill__track"><span class="skill__fill"></span></span>
+                        </li>
+                        <li class="skill" style="--val:81%">
+                            <span class="skill__top"><span>Arquitectura urbana</span><b>81</b></span>
+                            <span class="skill__track"><span class="skill__fill"></span></span>
+                        </li>
+                        <li class="skill" style="--val:92%">
+                            <span class="skill__top"><span>Revelação digital</span><b>92</b></span>
+                            <span class="skill__track"><span class="skill__fill"></span></span>
+                        </li>
+                    </ul>
+
+                    <div class="gear reveal" data-reveal data-delay="300">
+                        <span class="gear__label">Equipamento</span>
+                        <ul>
+                            <li><i class="fa-solid fa-camera" aria-hidden="true"></i> Corpo full-frame</li>
+                            <li><i class="fa-solid fa-circle-notch" aria-hidden="true"></i> 16-35mm f/2.8</li>
+                            <li><i class="fa-solid fa-circle-notch" aria-hidden="true"></i> 70-200mm f/4</li>
+                            <li><i class="fa-solid fa-sliders" aria-hidden="true"></i> Filtros ND &amp; polarizador</li>
+                            <li><i class="fa-solid fa-mountain-sun" aria-hidden="true"></i> Tripé de carbono</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SERVIÇOS ============ -->
+        <section class="section section--services" id="servicos">
+            <div class="shell">
+                <div class="section__head section__head--center">
+                    <p class="section__kicker reveal" data-reveal>03 — Como posso ajudar</p>
+                    <h2 class="section__title reveal" data-reveal data-delay="80">Serviços <em>disponíveis</em></h2>
+                </div>
+
+                <div class="cards">
+                    <article class="card reveal" data-reveal>
+                        <span class="card__icon"><i class="fa-solid fa-mountain-sun" aria-hidden="true"></i></span>
+                        <h3>Expedições fotográficas</h3>
+                        <p>Viagens de dois a cinco dias pelas províncias, com cobertura completa da paisagem e
+                            entrega de ficheiros tratados.</p>
+                        <span class="card__meta">a partir de 3 dias</span>
+                    </article>
+                    <article class="card reveal" data-reveal data-delay="90">
+                        <span class="card__icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span>
+                        <h3>Arquitectura &amp; hotelaria</h3>
+                        <p>Registo de espaços, lodges e edifícios com correcção de perspectiva e luz natural
+                            trabalhada ao detalhe.</p>
+                        <span class="card__meta">meia diária ou diária</span>
+                    </article>
+                    <article class="card reveal" data-reveal data-delay="180">
+                        <span class="card__icon"><i class="fa-solid fa-print" aria-hidden="true"></i></span>
+                        <h3>Impressões de autor</h3>
+                        <p>Tiragens limitadas em papel de algodão, numeradas e assinadas, com perfil de cor
+                            calibrado.</p>
+                        <span class="card__meta">edição de 25</span>
+                    </article>
+                    <article class="card reveal" data-reveal data-delay="270">
+                        <span class="card__icon"><i class="fa-solid fa-wand-magic-sparkles"
+                                aria-hidden="true"></i></span>
+                        <h3>Revelação &amp; edição</h3>
+                        <p>Tratamento dos seus ficheiros RAW mantendo a cor fiel ao momento, sem exageros de
+                            saturação.</p>
+                        <span class="card__meta">48h de entrega</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PERCURSO ============ -->
+        <section class="section section--timeline" id="percurso">
+            <div class="shell timeline-layout">
+                <div class="timeline-intro">
+                    <p class="section__kicker reveal" data-reveal>04 — Percurso</p>
+                    <h2 class="section__title reveal" data-reveal data-delay="80">Sete anos de <em>estrada</em></h2>
+                    <p class="section__note reveal" data-reveal data-delay="160">
+                        De uma câmara emprestada a um arquivo de onze províncias. O caminho até aqui, em quatro
+                        paragens.
+                    </p>
+                </div>
+
+                <ol class="timeline">
+                    <li class="timeline__item reveal" data-reveal>
+                        <span class="timeline__year">2018</span>
+                        <div class="timeline__body">
+                            <h3>A primeira madrugada</h3>
+                            <p>Câmara emprestada, viagem a Bilene e o primeiro nascer do sol fotografado a sério.
+                                Nunca mais devolvi o hábito.</p>
+                        </div>
+                    </li>
+                    <li class="timeline__item reveal" data-reveal data-delay="80">
+                        <span class="timeline__year">2020</span>
+                        <div class="timeline__body">
+                            <h3>Norte a sul</h3>
+                            <p>Projecto pessoal de atravessar o país por terra. Onze províncias, quatro mil
+                                quilómetros e o arquivo que sustenta esta galeria.</p>
+                        </div>
+                    </li>
+                    <li class="timeline__item reveal" data-reveal data-delay="160">
+                        <span class="timeline__year">2022</span>
+                        <div class="timeline__body">
+                            <h3>Primeira exposição</h3>
+                            <p>“Maré Alta” — vinte impressões grandes em Maputo, com metade da sala a perguntar
+                                onde ficava o Monte Binga.</p>
+                        </div>
+                    </li>
+                    <li class="timeline__item reveal" data-reveal data-delay="240">
+                        <span class="timeline__year">2024</span>
+                        <div class="timeline__body">
+                            <h3>MozScape</h3>
+                            <p>Todo o arquivo passa a viver online, em alta resolução e livre para descarregar.
+                                A paisagem é de quem a olha.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============ DEPOIMENTOS ============ -->
+        <section class="section section--quotes">
+            <div class="shell">
+                <div class="section__head section__head--center">
+                    <p class="section__kicker reveal" data-reveal>05 — Dizem por aí</p>
+                    <h2 class="section__title reveal" data-reveal data-delay="80">Quem já <em>trabalhou</em> comigo</h2>
+                </div>
+                <div class="quotes">
+                    <figure class="quote reveal" data-reveal>
+                        <i class="fa-solid fa-quote-left quote__mark" aria-hidden="true"></i>
+                        <blockquote>Pediu-nos três dias e devolveu uma campanha inteira. As imagens do lodge
+                            duplicaram as reservas de época baixa.</blockquote>
+                        <figcaption><b>Ana Chirindza</b><span>Lodge Ponta Mamoli</span></figcaption>
+                    </figure>
+                    <figure class="quote reveal" data-reveal data-delay="90">
+                        <i class="fa-solid fa-quote-left quote__mark" aria-hidden="true"></i>
+                        <blockquote>Trabalha com uma paciência rara. Esperou quatro horas pela maré certa e
+                            tinha razão — a fotografia é outra coisa.</blockquote>
+                        <figcaption><b>Edgar D.</b><span>Revista Índico</span></figcaption>
+                    </figure>
+                    <figure class="quote reveal" data-reveal data-delay="180">
+                        <i class="fa-solid fa-quote-left quote__mark" aria-hidden="true"></i>
+                        <blockquote>As impressões chegaram impecáveis e a cor é exactamente a que vimos no
+                            ecrã. Já encomendámos a segunda série.</blockquote>
+                        <figcaption><b>Gacker Studio</b><span>Maputo</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="cta" id="contactar">
+            <div class="cta__bg" aria-hidden="true"></div>
+            <div class="shell cta__inner reveal" data-reveal>
+                <p class="section__kicker">06 — Próximo passo</p>
+                <h2 class="cta__title">Tem uma paisagem <em>em mente?</em></h2>
+                <p class="cta__lede">Conte-me para onde quer ir e que luz procura. Respondo em 24 horas, com
+                    disponibilidade e orçamento.</p>
+                <div class="cta__actions">
+                    <a href="mailto:edsonpain29@gmail.com" class="btn btn--primary btn--lg">
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i> edsonpain29@gmail.com
+                    </a>
+                    <a href="contacto.html" class="btn btn--ghost btn--lg">Formulário de contacto</a>
+                </div>
+                <ul class="cta__social" aria-label="Redes sociais">
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="#" aria-label="Behance"><i class="fa-brands fa-behance" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="shell site-footer__inner">
+            <a class="brand" href="index.html">
+                <img src="images/logo-black.png" alt="MozScape" class="brand__logo">
+            </a>
+            <nav aria-label="Rodapé">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contacto.html">Contactos</a></li>
+                    <li><a href="ajuda_faq.html">Ajuda</a></li>
+                </ul>
+            </nav>
+            <p class="site-footer__copy">&copy; 2024 Pain Designer · MozScape</p>
+        </div>
+    </footer>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotografia" hidden>
+        <button class="lightbox__close" id="lbClose" type="button" aria-label="Fechar">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Fotografia anterior">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Fotografia seguinte">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+
+        <figure class="lightbox__stage">
+            <!-- sem atributo src: src="" faria o browser pedir a própria página -->
+            <img id="lbImage" alt="">
+            <figcaption class="lightbox__info">
+                <div>
+                    <h3 id="lbTitle"></h3>
+                    <p id="lbPlace"></p>
+                </div>
+                <div class="lightbox__side">
+                    <span class="lightbox__meta" id="lbMeta"></span>
+                    <a class="btn btn--primary btn--sm" id="lbDownload" href="#" download>
+                        <i class="fa-solid fa-download" aria-hidden="true"></i> Descarregar
+                    </a>
+                </div>
+            </figcaption>
+        </figure>
+
+        <span class="lightbox__counter" id="lbCounter"></span>
+    </div>
+
+    <button class="to-top" id="toTop" type="button" aria-label="Voltar ao topo">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="portfolio.js"></script>
+</body>
+
+</html>
